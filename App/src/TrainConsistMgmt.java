@@ -1,36 +1,34 @@
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
- * ==========================================
- * MAIN CLASS - UseCase7TrainConsistMgmt
- * ==========================================
+ * =====================================================
+ * MAIN CLASS - UseCase8TrainConsistMgmt
+ * =====================================================
  *
- * Use Case 7: Sort Bogies by Capacity
+ * Use Case 8: Filter Passenger Bogies Using Streams
  *
  * Description:
- * This class sorts passenger bogies based on
- * seating capacity using a custom Comparator.
+ * This class filters passenger bogies based on seating
+ * capacity using Java Stream API.
  *
  * At this stage, the application:
- * - Creates bogie objects
- * - Stores them in a List
- * - Displays unsorted data
- * - Sorts using Comparator logic
- * - Displays sorted result
+ * - Creates a list of bogies
+ * - Converts list into stream
+ * - Applies filter condition
+ * - Collects filtered result
+ * - Displays qualifying bogies
  *
- * This maps custom ordering using Comparator.
+ * This maps functional filtering using Streams.
  *
  * @author Vasantha
- * @version 7.0
+ * @version 8.0
  */
-
 public class TrainConsistMgmt {
 
-    // Inner Bogie class
+    // Reusing Bogie model from UC7
     static class Bogie {
-
         String name;
         int capacity;
 
@@ -38,55 +36,33 @@ public class TrainConsistMgmt {
             this.name = name;
             this.capacity = capacity;
         }
-
-        @Override
-        public String toString() {
-            return name + " -> " + capacity;
-        }
     }
 
     public static void main(String[] args) {
 
-        System.out.println("========================================");
-        System.out.println("UC7 - Sort Bogies by Capacity (Comparator)");
-        System.out.println("========================================\n");
+        System.out.println("================================================");
+        System.out.println("UC8 - Filter Passenger Bogies Using Streams");
+        System.out.println("================================================\n");
 
-        // Create List of passenger bogies
         List<Bogie> bogies = new ArrayList<>();
 
-
-        // Add bogie objects
         bogies.add(new Bogie("Sleeper", 72));
         bogies.add(new Bogie("AC Chair", 56));
         bogies.add(new Bogie("First Class", 24));
         bogies.add(new Bogie("General", 90));
 
+        System.out.println("All Bogies:");
+        bogies.forEach(b ->
+                System.out.println(b.name + " -> " + b.capacity));
 
-        // Before sorting
-        System.out.println("Before Sorting:");
+        List<Bogie> filteredBogies = bogies.stream()
+                .filter(b -> b.capacity > 60)
+                .collect(Collectors.toList());
 
-        for (Bogie bogie : bogies) {
-            System.out.println(bogie);
-        }
+        System.out.println("\nFiltered Bogies (Capacity > 60):");
+        filteredBogies.forEach(b ->
+                System.out.println(b.name + " -> " + b.capacity));
 
-
-        // Sort by capacity
-        bogies.sort(
-                Comparator.comparingInt(
-                        bogie -> bogie.capacity
-                )
-        );
-
-
-        // After sorting
-        System.out.println("\nAfter Sorting by Capacity:");
-
-        for (Bogie bogie : bogies) {
-            System.out.println(bogie);
-        }
-
-        System.out.println(
-                "\nUC7 sorting completed..."
-        );
+        System.out.println("\nUC8 filtering completed...");
     }
 }
