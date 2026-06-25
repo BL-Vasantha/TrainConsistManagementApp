@@ -10,6 +10,7 @@ public class GoodsBogie {
         this.cargo = cargo;
     }
 
+
     public String getType() {
         return type;
     }
