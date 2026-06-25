@@ -15,6 +15,7 @@ public class ValidationController {
         boolean trainValid = validator.isValidTrainId(trainId);
         boolean cargoValid = validator.isValidCargoCode(cargoCode);
 
+
         System.out.println("\n--- Validation Result ---");
 
         if (trainValid) {
