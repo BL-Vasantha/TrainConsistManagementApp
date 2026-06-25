@@ -1,4 +1,5 @@
 package controller;
+
 import model.GoodsBogie;
 import service.SafetyService;
 
