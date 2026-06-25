@@ -11,7 +11,6 @@ public class TrainController {
         this.service = new TrainServiceImpl();
     }
 
-
     public void addBogieCapacity(String bogie, int capacity) {
         service.addBogieCapacity(bogie, capacity);
     }

@@ -1,7 +1,8 @@
 package app;
 
 import model.GoodsBogie;
-import service.SafetyService;
+import service.PerformanceService;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,27 +13,21 @@ public class TrainApplication {
 
         List<GoodsBogie> bogies = new ArrayList<>();
 
-        bogies.add(new GoodsBogie("cylindrical", "petroleum"));
-        bogies.add(new GoodsBogie("open", "coal"));
-        bogies.add(new GoodsBogie("box", "grain"));
-
-        // Print Bogies
-        System.out.println("goods bogies in train\n");
-
-        for (GoodsBogie b : bogies) {
-            System.out.println(b.getType() + " - " + b.getCargo());
+        // Creating large dataset for better comparison
+        for (int i = 0; i < 10000; i++) {
+            bogies.add(new GoodsBogie("cylindrical", "petroleum"));
+            bogies.add(new GoodsBogie("open", "coal"));
+            bogies.add(new GoodsBogie("box", "grain"));
         }
 
-        // Safety Check
-        SafetyService service = new SafetyService();
-        boolean isSafe = service.checkSafety(bogies);
+        PerformanceService service = new PerformanceService();
 
-        System.out.println("\nsafety compliance status : " + isSafe);
+        System.out.println("=== Performance Comparison ===\n");
 
-        if (isSafe) {
-            System.out.println("train formation is safe");
-        } else {
-            System.out.println("train formation is not safe");
-        }
+        // Loop
+        service.filterUsingLoop(bogies);
+
+        // Stream
+        service.filterUsingStream(bogies);
     }
 }

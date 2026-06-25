@@ -12,7 +12,6 @@ public class Bogie {
         this.actualSeats = actualSeats;
     }
 
-    
     public String getName() {
         return name;
     }
