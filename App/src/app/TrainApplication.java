@@ -1,33 +1,38 @@
 package app;
 
-import controller.ValidationController;
+import model.GoodsBogie;
+import service.SafetyService;
 
-import java.util.Scanner;
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class TrainApplication {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        ValidationController controller = new ValidationController();
+        List<GoodsBogie> bogies = new ArrayList<>();
 
-        System.out.println("=== UC11: Validate Train ID & Cargo Code ===");
+        bogies.add(new GoodsBogie("cylindrical", "petroleum"));
+        bogies.add(new GoodsBogie("open", "coal"));
+        bogies.add(new GoodsBogie("box", "grain"));
 
-        // User Input
-        System.out.print("Enter Train ID: ");
-        String trainId = scanner.nextLine();
+        // Print Bogies
+        System.out.println("goods bogies in train\n");
 
-        System.out.print("Enter Cargo Code: ");
-        String cargoCode = scanner.nextLine();
+        for (GoodsBogie b : bogies) {
+            System.out.println(b.getType() + " - " + b.getCargo());
+        }
 
-        // Validation
-        controller.validate(trainId, cargoCode);
+        // Safety Check
+        SafetyService service = new SafetyService();
+        boolean isSafe = service.checkSafety(bogies);
 
-        // Demo invalid case
-        System.out.println("\n--- Demo Invalid Inputs ---");
-        controller.validate("TRAIN12", "PET-123");
+        System.out.println("\nsafety compliance status : " + isSafe);
 
-        scanner.close();
+        if (isSafe) {
+            System.out.println("train formation is safe");
+        } else {
+            System.out.println("train formation is not safe");
+        }
     }
 }
