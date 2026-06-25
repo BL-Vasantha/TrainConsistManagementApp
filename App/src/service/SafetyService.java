@@ -1,8 +1,18 @@
 package service;
 
-public interface TrainService {
+import model.GoodsBogie;
+import java.util.List;
 
-    void addBogieCapacity(String bogie, int capacity);
+public class SafetyService {
 
-    void displayFormation();
+    public boolean checkSafety(List<GoodsBogie> bogies) {
+
+        return bogies.stream()
+                .allMatch(b -> {
+                    if (b.getType().equalsIgnoreCase("cylindrical")) {
+                        return b.getCargo().equalsIgnoreCase("petroleum");
+                    }
+                    return true;
+                });
+    }
 }
