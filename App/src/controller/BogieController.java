@@ -6,7 +6,6 @@ import service.BogieServiceImpl;
 
 import java.util.List;
 
-
 public class BogieController {
 
     private final BogieService service;
