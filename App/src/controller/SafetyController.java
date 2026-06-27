@@ -19,6 +19,7 @@ public class SafetyController {
 
         System.out.println("\n--- Safety Compliance Result ---");
 
+        
         if (isSafe) {
             System.out.println("Train is SAFE for operation ✅");
         } else {
