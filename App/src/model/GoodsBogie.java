@@ -5,9 +5,8 @@ public class GoodsBogie {
     private String type;
     private String cargo;
 
-    public GoodsBogie(String type, String cargo) {
+    public GoodsBogie(String type) {
         this.type = type;
-        this.cargo = cargo;
     }
 
     public String getType() {
@@ -16,5 +15,9 @@ public class GoodsBogie {
 
     public String getCargo() {
         return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 }
