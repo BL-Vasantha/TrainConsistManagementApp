@@ -9,5 +9,6 @@ public interface BogieService {
 
     List<Bogie> getAllBogies();
 
+
     int getTotalSeatingCapacity();
 }
