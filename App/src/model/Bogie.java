@@ -6,7 +6,6 @@ public class Bogie {
     private int displayCount;   // what user sees
     private int actualSeats;    // used for total calculation
 
-
     public Bogie(String name, int displayCount, int actualSeats) {
         this.name = name;
         this.displayCount = displayCount;

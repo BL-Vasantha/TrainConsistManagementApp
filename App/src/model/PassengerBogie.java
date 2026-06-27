@@ -1,6 +1,5 @@
 package model;
 
-
 import exception.InvalidCapacityException;
 
 public class PassengerBogie {

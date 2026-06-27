@@ -23,7 +23,6 @@ public class ValidationController {
             System.out.println("Train ID is INVALID: " + trainId);
         }
 
-
         if (cargoValid) {
             System.out.println("Cargo Code is VALID: " + cargoCode);
         } else {
