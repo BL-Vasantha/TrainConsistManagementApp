@@ -22,6 +22,7 @@ public class RegexValidator {
         return trainPattern.matcher(trainId).matches();
     }
 
+
     // Validate Cargo Code
     public boolean isValidCargoCode(String cargoCode) {
         return cargoPattern.matcher(cargoCode).matches();
