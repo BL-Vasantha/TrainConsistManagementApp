@@ -122,10 +122,51 @@ Each Use Case (UC) introduces concepts progressively through practical implement
 TrainConsistManagementApp/
 │
 ├── src/
-│   ├── model/
-│   ├── service/
-│   ├── exception/
-│   ├── util/
-│   └── app/
+│   │
+│   ├── app/                → Application entry point (Main.java)
+│   │
+│   ├── controller/         → Handles user requests and flow control
+│   │
+│   ├── model/              → Entity classes (Train, Bogie, PassengerBogie)
+│   │
+│   ├── service/            → Business logic and processing
+│   │
+│   ├── validation/         → Input validation and business rule validation
+│   │
+│   ├── exception/          → Custom exceptions and error handling
+│   │
+│   ├── util/               → Utility/helper classes
 │
 ├── README.md
+
+```
+
+## 📂 Package Responsibilities
+
+### 🚉 app
+
+Application startup and execution flow.
+
+### 🎮 controller
+
+Receives user actions and coordinates services.
+
+### 🚆 model
+
+Stores train and bogie data objects.
+
+### ⚙️ service
+
+Contains business operations and processing logic.
+
+### ✅ validation
+
+Performs input validation, regex checks, safety rules, and data verification.
+
+### 🛡️ exception
+
+Handles custom and runtime exceptions.
+
+### 🔧 util
+
+Reusable utility methods and helper classes.
