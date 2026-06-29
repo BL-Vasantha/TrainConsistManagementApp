@@ -21,6 +21,7 @@ public class Bogie {
         return displayCount;
     }
 
+
     public int getActualSeats() {
         return actualSeats;
     }
