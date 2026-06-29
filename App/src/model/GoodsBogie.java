@@ -14,7 +14,6 @@ public class GoodsBogie {
     }
 
 
-
     public String getCargo() {
         return cargo;
     }
