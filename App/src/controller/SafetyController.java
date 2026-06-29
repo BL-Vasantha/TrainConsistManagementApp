@@ -5,6 +5,7 @@ import service.SafetyService;
 
 import java.util.List;
 
+
 public class SafetyController {
 
     private final SafetyService service;
@@ -16,8 +17,6 @@ public class SafetyController {
     public void checkSafety(List<GoodsBogie> bogies) {
 
         boolean isSafe = service.checkSafety(bogies);
-
-
 
         System.out.println("\n--- Safety Compliance Result ---");
 

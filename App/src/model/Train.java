@@ -3,6 +3,7 @@ package model;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Train {
 
     private final Map<String, Integer> bogieCapacityMap = new HashMap<>();
