@@ -22,6 +22,7 @@ public class BogieController {
         return service.getAllBogies();
     }
 
+
     public int getTotalCapacity() {
         return service.getTotalSeatingCapacity();
     }
