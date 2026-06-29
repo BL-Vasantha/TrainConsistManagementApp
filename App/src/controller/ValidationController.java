@@ -10,6 +10,7 @@ public class ValidationController {
         this.validator = new RegexValidator();
     }
 
+
     public void validate(String trainId, String cargoCode) {
 
         boolean trainValid = validator.isValidTrainId(trainId);
