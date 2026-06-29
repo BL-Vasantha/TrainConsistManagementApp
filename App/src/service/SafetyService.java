@@ -3,7 +3,6 @@ package service;
 import model.GoodsBogie;
 import java.util.List;
 
-
 public class SafetyService {
 
     public boolean checkSafety(List<GoodsBogie> bogies) {
