@@ -9,8 +9,6 @@ public class TrainServiceImpl implements TrainService {
 
     private final Train train = new Train();
 
-
-
     @Override
     public void addBogieCapacity(String bogie, int capacity) {
         train.getBogieCapacityMap().put(bogie, capacity);
