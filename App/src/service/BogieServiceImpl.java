@@ -19,8 +19,6 @@ public class BogieServiceImpl implements BogieService {
         return bogies;
     }
 
-
-
     @Override
     public int getTotalSeatingCapacity() {
         return bogies.stream()
