@@ -16,6 +16,7 @@ public class TrainServiceImpl implements TrainService {
 
 
     @Override
+
     public void displayFormation() {
         for (Map.Entry<String, Integer> entry : train.getBogieCapacityMap().entrySet()) {
             System.out.println(entry.getKey() + " -> Capacity: " + entry.getValue());
