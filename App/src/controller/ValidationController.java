@@ -10,7 +10,6 @@ public class ValidationController {
         this.validator = new RegexValidator();
     }
 
-
     public void validate(String trainId, String cargoCode) {
 
         boolean trainValid = validator.isValidTrainId(trainId);
@@ -23,6 +22,7 @@ public class ValidationController {
         } else {
             System.out.println("Train ID is INVALID: " + trainId);
         }
+
 
         if (cargoValid) {
             System.out.println("Cargo Code is VALID: " + cargoCode);
