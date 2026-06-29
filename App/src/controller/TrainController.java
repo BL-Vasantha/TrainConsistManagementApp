@@ -16,6 +16,7 @@ public class TrainController {
         service.addBogieCapacity(bogie, capacity);
     }
 
+
     public void displayFormation() {
         service.displayFormation();
     }

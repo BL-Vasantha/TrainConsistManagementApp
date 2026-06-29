@@ -33,17 +33,15 @@ public class PerformanceService {
 
         long start = System.nanoTime();
 
-
         List<GoodsBogie> result = bogies.stream()
                 .filter(b -> b.getType().equalsIgnoreCase("cylindrical"))
                 .collect(Collectors.toList());
 
         long end = System.nanoTime();
 
+
         System.out.println("Stream Execution Time: " + (end - start) + " ns");
 
         return result;
     }
 }
-
-

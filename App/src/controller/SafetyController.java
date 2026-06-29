@@ -13,10 +13,11 @@ public class SafetyController {
         this.service = new SafetyService();
     }
 
-
     public void checkSafety(List<GoodsBogie> bogies) {
 
         boolean isSafe = service.checkSafety(bogies);
+
+
 
         System.out.println("\n--- Safety Compliance Result ---");
 
