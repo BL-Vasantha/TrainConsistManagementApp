@@ -12,7 +12,6 @@ public class Bogie {
         this.actualSeats = actualSeats;
     }
 
-
     public String getName() {
         return name;
     }
@@ -20,6 +19,7 @@ public class Bogie {
     public int getDisplayCount() {
         return displayCount;
     }
+
 
     public int getActualSeats() {
         return actualSeats;
