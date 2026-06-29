@@ -5,8 +5,6 @@ import service.TrainServiceImpl;
 
 public class TrainController {
 
-
-
     private final TrainService service;
 
     public TrainController() {
