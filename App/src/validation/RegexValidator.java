@@ -17,11 +17,11 @@ public class RegexValidator {
         this.cargoPattern = Pattern.compile(CARGO_REGEX);
     }
 
+
     // Validate Train ID
     public boolean isValidTrainId(String trainId) {
         return trainPattern.matcher(trainId).matches();
     }
-
 
     // Validate Cargo Code
     public boolean isValidCargoCode(String cargoCode) {

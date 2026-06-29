@@ -16,6 +16,7 @@ public class Bogie {
         return name;
     }
 
+    
     public int getDisplayCount() {
         return displayCount;
     }

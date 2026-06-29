@@ -13,6 +13,7 @@ public class GoodsBogie {
         return type;
     }
 
+
     public String getCargo() {
         return cargo;
     }
