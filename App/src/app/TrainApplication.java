@@ -1,30 +1,25 @@
 package app;
 
-
 import service.SortingService;
+
+import java.util.Arrays;
 
 public class TrainApplication {
 
     public static void main(String[] args) {
 
-        // 🔹 Input array (Passenger bogie capacities)
-        int[] capacities = {72, 50, 90, 40, 60};
+        // 🔹 Input bogie names
+        String[] bogieNames = {"Sleeper", "AC Chair", "First Class", "General", "Second Sitting"};
 
         SortingService service = new SortingService();
 
-        System.out.println("Passenger Bogie Capacities (Before Sorting):");
+        System.out.println("Bogie Names (Before Sorting):");
+        System.out.println(Arrays.toString(bogieNames));
 
-        for (int cap : capacities) {
-            System.out.print(cap + " ");
-        }
+        // 🔄 Sorting using Arrays.sort()
+        String[] sorted = service.sortBogieNames(bogieNames);
 
-        // 🔄 Perform Bubble Sort
-        service.bubbleSort(capacities);
-
-        System.out.println("\n\nPassenger Bogie Capacities (After Sorting):");
-
-        for (int cap : capacities) {
-            System.out.print(cap + " ");
-        }
+        System.out.println("\nBogie Names (After Sorting):");
+        System.out.println(Arrays.toString(sorted));
     }
 }
