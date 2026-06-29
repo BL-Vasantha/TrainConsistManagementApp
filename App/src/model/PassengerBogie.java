@@ -20,7 +20,6 @@ public class PassengerBogie {
         this.capacity = capacity;
     }
 
-
     public String getType() {
         return type;
     }

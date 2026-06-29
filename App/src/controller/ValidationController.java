@@ -24,6 +24,7 @@ public class ValidationController {
         }
 
 
+
         if (cargoValid) {
             System.out.println("Cargo Code is VALID: " + cargoCode);
         } else {
