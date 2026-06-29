@@ -39,7 +39,6 @@ public class PerformanceService {
 
         long end = System.nanoTime();
 
-
         System.out.println("Stream Execution Time: " + (end - start) + " ns");
 
         return result;
