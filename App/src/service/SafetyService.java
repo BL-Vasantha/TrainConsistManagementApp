@@ -5,6 +5,7 @@ import java.util.List;
 
 public class SafetyService {
 
+
     public boolean checkSafety(List<GoodsBogie> bogies) {
 
         return bogies.stream()
