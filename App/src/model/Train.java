@@ -10,4 +10,5 @@ public class Train {
     public Map<String, Integer> getBogieCapacityMap() {
         return bogieCapacityMap;
     }
+
 }
