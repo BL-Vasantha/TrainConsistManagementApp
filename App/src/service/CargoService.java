@@ -28,6 +28,7 @@ public class CargoService {
 
         } finally {
 
+
             // 🔄 Always executes
             System.out.println("Cargo assignment attempt completed\n");
         }
