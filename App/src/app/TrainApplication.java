@@ -1,25 +1,27 @@
 package app;
 
-import service.SortingService;
 
-import java.util.Arrays;
+import service.SearchService;
 
 public class TrainApplication {
 
     public static void main(String[] args) {
 
-        // 🔹 Input bogie names
-        String[] bogieNames = {"Sleeper", "AC Chair", "First Class", "General", "Second Sitting"};
+        // 🔹 Unsorted Bogie IDs
+        String[] bogieIds = {"BG101", "BG205", "BG150", "BG999", "BG321"};
 
-        SortingService service = new SortingService();
+        String searchKey = "BG150"; // 🔍 ID to search
 
-        System.out.println("Bogie Names (Before Sorting):");
-        System.out.println(Arrays.toString(bogieNames));
+        SearchService service = new SearchService();
 
-        // 🔄 Sorting using Arrays.sort()
-        String[] sorted = service.sortBogieNames(bogieNames);
+        System.out.println("Searching for Bogie ID: " + searchKey);
 
-        System.out.println("\nBogie Names (After Sorting):");
-        System.out.println(Arrays.toString(sorted));
+        boolean found = service.searchBogieById(bogieIds, searchKey);
+
+        if (found) {
+            System.out.println("✅ Bogie Found in Train Consist");
+        } else {
+            System.out.println("❌ Bogie Not Found");
+        }
     }
 }
