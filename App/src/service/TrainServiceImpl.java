@@ -5,6 +5,7 @@ import model.Train;
 
 import java.util.Map;
 
+
 public class TrainServiceImpl implements TrainService {
 
     private final Train train = new Train();
@@ -13,7 +14,6 @@ public class TrainServiceImpl implements TrainService {
     public void addBogieCapacity(String bogie, int capacity) {
         train.getBogieCapacityMap().put(bogie, capacity);
     }
-
 
     @Override
     public void displayFormation() {
