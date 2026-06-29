@@ -5,7 +5,6 @@ import service.SafetyService;
 
 import java.util.List;
 
-
 public class SafetyController {
 
     private final SafetyService service;
